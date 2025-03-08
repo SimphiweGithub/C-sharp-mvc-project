@@ -5,9 +5,15 @@ namespace WebApplication1.Models
     public class Expenses
     {
         public int ID { get; set; }
+
+        [Range(0, double.MaxValue, ErrorMessage = "Value must be a positive number.")]
         public double Value { get; set; }
-        [Required]//we set this string to nullale but the enforce it so that a datatype is required
-        //? allows you to have a null value
+
+        [Required(ErrorMessage = "Description is required.")]
         public string? Description { get; set; }
+
+        [Required(ErrorMessage = "Category is required.")]
+        public string? Category { get; set; } // New Category field
     }
 }
+

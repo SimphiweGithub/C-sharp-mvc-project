@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Controllers
+namespace WebApplication1.Models
 {
-    public class Expense
+    public class Expenses
     {
         public int ID { get; set; }
         public double Value { get; set; }

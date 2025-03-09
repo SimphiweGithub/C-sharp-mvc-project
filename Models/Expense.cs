@@ -14,6 +14,10 @@ namespace WebApplication1.Models
 
         [Required(ErrorMessage = "Category is required.")]
         public string? Category { get; set; } // New Category field
+
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime Date { get; set; }
     }
 }
 
